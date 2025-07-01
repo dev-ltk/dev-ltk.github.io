@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical velocity calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        header {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            appearance: textfield;
+        }
+
+        #k1 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="dataGrid.html">Go to Data Grid Page</a>
+    <br><br>
+
+    <header>
+        <h1>Critical velocity calculator</h1>
+    </header>
+    <p id="intro-paragraph">This is a critical velocity calculator based on NFPA 502.</p>
+    <main>
+        <label for="q">Q (MW)</label>
+        <input type="number" id="q" name="q"><br><br>
+
+        <label for="a">A (m<sup>2</sup>)</label>
+        <input type="number" id="a" name="a"><br><br>
+
+        <label for="t_inf">T (<sup>o</sup>C)</label>
+        <input type="number" id="t_inf" name="t_inf"><br><br>
+
+        <label for="grade">G (%)</label>
+        <input type="number" id="grade" name="grade"><br><br>
+
+        <label for="h">H (m)</label>
+        <input type="number" id="h" name="h"><br><br>
+
+        <div id="nfpa">
+            <label>NFPA Revision</label>
+            <label>
+                <input type="radio" name="nfpaRevision" value="2014" checked>
+                2014
+            </label>
+            <label>
+                <input type="radio" name="nfpaRevision" value="2017">
+                2017
+            </label>
+        </div>
+
+        <div id="k1">
+            <br>
+            <label>k1</label>
+            <label>
+                <input type="radio" name="k1Option" value="roundup" checked>
+                Roundup
+            </label>
+            <label>
+                <input type="radio" name="k1Option" value="interpolate">
+                Interpolate
+            </label>
+
+        </div>
+
+        <p>Critical Velocity (m/s):</p>
+        <p id="cv"></p>
+
+        <button id="btn">Calculate</button>
+    </main>
+    <!-- Only include the main script as a module, do not include vc.js separately -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
