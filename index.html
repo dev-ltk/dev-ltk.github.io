@@ -39,15 +39,20 @@
         #k1 {
             display: none;
         }
+
+        #top-link-anchor {
+            display: block;
+            text-align: right;
+        }
     </style>
 </head>
 
 <body>
-    <a href="dataGrid.html">Go to Data Grid Page</a>
+    <a href="table.html" id="top-link-anchor">Go to Table View</a>
     <br><br>
 
     <header>
-        <h1>Critical velocity calculator</h1>
+        <h1>Critical Velocity Calculator</h1>
     </header>
     <p id="intro-paragraph">This is a critical velocity calculator based on NFPA 502.</p>
     <main>
@@ -97,7 +102,6 @@
 
         <button id="btn">Calculate</button>
     </main>
-    <!-- Only include the main script as a module, do not include vc.js separately -->
     <script type="module" src="script.js"></script>
 </body>
 

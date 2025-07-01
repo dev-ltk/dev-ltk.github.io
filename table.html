@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <link href="https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Critical Velocity Calculator (Table View)</h1>
+
+    <div>
+        <button id="download-csv">Download CSV</button>
+        <button id="download-xlsx">Download XLSX</button>
+    </div>
+    <br>
+
+    <div id="example-table"></div>
+
+    <br>
+
+    <div>
+        <label id="table-message"></label>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
+    <script type="text/javascript" src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script type="module" src="tableScript.js"></script>
+</body>
+
+</html>
